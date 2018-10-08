@@ -8,13 +8,26 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        // Set title name
+        let selectedRow = self.tableView.indexPathForSelectedRow
+        let cell = self.tableView.cellForRow(at: selectedRow!)
+        segue.destination.title = cell?.textLabel?.text
+        
+        // Set name of back button
+        let backButton = UIBarButtonItem()
+        backButton.title = "Back"
+        self.navigationItem.backBarButtonItem = backButton
+    }
 
 }
 

@@ -12,7 +12,7 @@
         <!--Smart ICT Company-->
         <scene sceneID="scR-3x-6w1">
             <objects>
-                <tableViewController title="Smart ICT Company" id="R0z-Qa-tch" sceneMemberID="viewController">
+                <tableViewController title="Smart ICT Company" id="R0z-Qa-tch" customClass="ViewController" customModule="I" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="btd-rp-UBg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -176,7 +176,7 @@
                             <outlet property="delegate" destination="R0z-Qa-tch" id="hXI-3E-MUc"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Smart ICT Company" id="6yU-lv-7Ga"/>
+                    <navigationItem key="navigationItem" id="6yU-lv-7Ga"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="66d-WD-Ydd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -198,34 +198,58 @@
             </objects>
             <point key="canvasLocation" x="-1524" y="298"/>
         </scene>
-        <!--View Controller-->
+        <!--Page One View Controller-->
         <scene sceneID="lOK-Pg-nah">
             <objects>
-                <viewController id="3TG-KF-JyS" sceneMemberID="viewController">
+                <viewController id="3TG-KF-JyS" customClass="PageOneViewController" customModule="MYIOSDEV" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="C3z-Dr-FlC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WebKit Integration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qq2-DB-H7V">
-                                <rect key="frame" x="116" y="232" width="142" height="21"/>
+                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i2L-7v-paf">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="kr6-yW-TIJ">
+                                <rect key="frame" x="176.0020325203036" y="325.01422764230711" width="19.999999999999545" height="19.999999999999773"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Qis-62-CGm"/>
                     </view>
+                    <navigationItem key="navigationItem" id="6Q4-Sz-9Re">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="2Gj-fM-FFg">
+                            <rect key="frame" x="145" y="7" width="85" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="Web"/>
+                                <segment title="PDF"/>
+                            </segments>
+                            <connections>
+                                <action selector="onSegmentChangeWithSender:" destination="3TG-KF-JyS" eventType="valueChanged" id="895-iJ-cQ4"/>
+                            </connections>
+                        </segmentedControl>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mLoading" destination="kr6-yW-TIJ" id="kmm-wT-M6L"/>
+                        <outlet property="mWebKit" destination="i2L-7v-paf" id="8Py-Xo-7Q2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u3L-Rv-fex" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1959" y="1130"/>
+            <point key="canvasLocation" x="-1959.2" y="1129.385307346327"/>
         </scene>
-        <!--View Controller-->
+        <!--Page Two View Controller-->
         <scene sceneID="ueA-NP-OkC">
             <objects>
-                <viewController id="zbu-Ar-kAL" sceneMemberID="viewController">
+                <viewController id="zbu-Ar-kAL" customClass="PageTwoViewController" customModule="MYIOSDEV" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ajf-jJ-8NX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -246,10 +270,10 @@
             </objects>
             <point key="canvasLocation" x="-1253" y="1129"/>
         </scene>
-        <!--View Controller-->
+        <!--Page Three View Controller-->
         <scene sceneID="BcV-Kn-Msi">
             <objects>
-                <viewController id="ge1-UY-IXr" sceneMemberID="viewController">
+                <viewController id="ge1-UY-IXr" customClass="PageThreeViewController" customModule="MYIOSDEV" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6QW-dT-0li">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -270,10 +294,10 @@
             </objects>
             <point key="canvasLocation" x="-558" y="1124"/>
         </scene>
-        <!--View Controller-->
+        <!--Page Four View Controller-->
         <scene sceneID="YCj-my-5rd">
             <objects>
-                <viewController id="yJ5-VD-LhT" sceneMemberID="viewController">
+                <viewController id="yJ5-VD-LhT" customClass="PageFourViewController" customModule="MYIOSDEV" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fwz-kC-hHw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -294,10 +318,10 @@
             </objects>
             <point key="canvasLocation" x="130" y="1124"/>
         </scene>
-        <!--View Controller-->
+        <!--Page Five View Controller-->
         <scene sceneID="TmR-Ee-Vs7">
             <objects>
-                <viewController id="GKC-td-qma" sceneMemberID="viewController">
+                <viewController id="GKC-td-qma" customClass="PageFiveViewController" customModule="MYIOSDEV" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BrR-gw-Nwm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -318,10 +342,10 @@
             </objects>
             <point key="canvasLocation" x="814" y="1124"/>
         </scene>
-        <!--View Controller-->
+        <!--Page Six View Controller-->
         <scene sceneID="5eK-X7-fjJ">
             <objects>
-                <viewController id="vTq-XF-eXX" sceneMemberID="viewController">
+                <viewController id="vTq-XF-eXX" customClass="PageSixViewController" customModule="MYIOSDEV" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rwb-nF-zHi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

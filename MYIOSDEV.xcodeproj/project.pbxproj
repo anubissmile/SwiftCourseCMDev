@@ -16,6 +16,12 @@
 		D01C05DA216B11B20095AA1F /* DS-Digital.TTF in Resources */ = {isa = PBXBuildFile; fileRef = D01C05D6216B11B20095AA1F /* DS-Digital.TTF */; };
 		D01C05DB216B11B20095AA1F /* Solari.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D01C05D7216B11B20095AA1F /* Solari.ttf */; };
 		D01C05DC216B11B20095AA1F /* data.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D01C05D8216B11B20095AA1F /* data.sqlite */; };
+		D01C05DE216B32A20095AA1F /* PageOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01C05DD216B32A20095AA1F /* PageOneViewController.swift */; };
+		D01C05E0216B32BF0095AA1F /* PageTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01C05DF216B32BF0095AA1F /* PageTwoViewController.swift */; };
+		D01C05E2216B32D30095AA1F /* PageThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01C05E1216B32D30095AA1F /* PageThreeViewController.swift */; };
+		D01C05E4216B32E10095AA1F /* PageFourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01C05E3216B32E10095AA1F /* PageFourViewController.swift */; };
+		D01C05E6216B32F20095AA1F /* PageFiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01C05E5216B32F20095AA1F /* PageFiveViewController.swift */; };
+		D01C05E8216B33070095AA1F /* PageSixViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01C05E7216B33070095AA1F /* PageSixViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +36,12 @@
 		D01C05D6216B11B20095AA1F /* DS-Digital.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DS-Digital.TTF"; sourceTree = "<group>"; };
 		D01C05D7216B11B20095AA1F /* Solari.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Solari.ttf; sourceTree = "<group>"; };
 		D01C05D8216B11B20095AA1F /* data.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = data.sqlite; sourceTree = "<group>"; };
+		D01C05DD216B32A20095AA1F /* PageOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageOneViewController.swift; sourceTree = "<group>"; };
+		D01C05DF216B32BF0095AA1F /* PageTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageTwoViewController.swift; sourceTree = "<group>"; };
+		D01C05E1216B32D30095AA1F /* PageThreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageThreeViewController.swift; sourceTree = "<group>"; };
+		D01C05E3216B32E10095AA1F /* PageFourViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageFourViewController.swift; sourceTree = "<group>"; };
+		D01C05E5216B32F20095AA1F /* PageFiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageFiveViewController.swift; sourceTree = "<group>"; };
+		D01C05E7216B33070095AA1F /* PageSixViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageSixViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +81,12 @@
 				D01C05C9216AFEC80095AA1F /* Assets.xcassets */,
 				D01C05CB216AFEC80095AA1F /* LaunchScreen.storyboard */,
 				D01C05CE216AFEC80095AA1F /* Info.plist */,
+				D01C05DD216B32A20095AA1F /* PageOneViewController.swift */,
+				D01C05DF216B32BF0095AA1F /* PageTwoViewController.swift */,
+				D01C05E1216B32D30095AA1F /* PageThreeViewController.swift */,
+				D01C05E3216B32E10095AA1F /* PageFourViewController.swift */,
+				D01C05E5216B32F20095AA1F /* PageFiveViewController.swift */,
+				D01C05E7216B33070095AA1F /* PageSixViewController.swift */,
 			);
 			path = MYIOSDEV;
 			sourceTree = "<group>";
@@ -159,8 +177,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D01C05E2216B32D30095AA1F /* PageThreeViewController.swift in Sources */,
+				D01C05E0216B32BF0095AA1F /* PageTwoViewController.swift in Sources */,
+				D01C05DE216B32A20095AA1F /* PageOneViewController.swift in Sources */,
+				D01C05E4216B32E10095AA1F /* PageFourViewController.swift in Sources */,
 				D01C05C5216AFEC10095AA1F /* ViewController.swift in Sources */,
 				D01C05C3216AFEC10095AA1F /* AppDelegate.swift in Sources */,
+				D01C05E8216B33070095AA1F /* PageSixViewController.swift in Sources */,
+				D01C05E6216B32F20095AA1F /* PageFiveViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
