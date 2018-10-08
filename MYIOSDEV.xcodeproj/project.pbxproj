@@ -12,6 +12,10 @@
 		D01C05C8216AFEC10095AA1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D01C05C6216AFEC10095AA1F /* Main.storyboard */; };
 		D01C05CA216AFEC80095AA1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D01C05C9216AFEC80095AA1F /* Assets.xcassets */; };
 		D01C05CD216AFEC80095AA1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D01C05CB216AFEC80095AA1F /* LaunchScreen.storyboard */; };
+		D01C05D9216B11B20095AA1F /* product.pdf in Resources */ = {isa = PBXBuildFile; fileRef = D01C05D5216B11B20095AA1F /* product.pdf */; };
+		D01C05DA216B11B20095AA1F /* DS-Digital.TTF in Resources */ = {isa = PBXBuildFile; fileRef = D01C05D6216B11B20095AA1F /* DS-Digital.TTF */; };
+		D01C05DB216B11B20095AA1F /* Solari.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D01C05D7216B11B20095AA1F /* Solari.ttf */; };
+		D01C05DC216B11B20095AA1F /* data.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D01C05D8216B11B20095AA1F /* data.sqlite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		D01C05C9216AFEC80095AA1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D01C05CC216AFEC80095AA1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D01C05CE216AFEC80095AA1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D01C05D5216B11B20095AA1F /* product.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = product.pdf; sourceTree = "<group>"; };
+		D01C05D6216B11B20095AA1F /* DS-Digital.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DS-Digital.TTF"; sourceTree = "<group>"; };
+		D01C05D7216B11B20095AA1F /* Solari.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Solari.ttf; sourceTree = "<group>"; };
+		D01C05D8216B11B20095AA1F /* data.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = data.sqlite; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +62,7 @@
 		D01C05C1216AFEC10095AA1F /* MYIOSDEV */ = {
 			isa = PBXGroup;
 			children = (
+				D01C05D4216B10B60095AA1F /* Res */,
 				D01C05C2216AFEC10095AA1F /* AppDelegate.swift */,
 				D01C05C4216AFEC10095AA1F /* ViewController.swift */,
 				D01C05C6216AFEC10095AA1F /* Main.storyboard */,
@@ -62,6 +71,17 @@
 				D01C05CE216AFEC80095AA1F /* Info.plist */,
 			);
 			path = MYIOSDEV;
+			sourceTree = "<group>";
+		};
+		D01C05D4216B10B60095AA1F /* Res */ = {
+			isa = PBXGroup;
+			children = (
+				D01C05D8216B11B20095AA1F /* data.sqlite */,
+				D01C05D6216B11B20095AA1F /* DS-Digital.TTF */,
+				D01C05D5216B11B20095AA1F /* product.pdf */,
+				D01C05D7216B11B20095AA1F /* Solari.ttf */,
+			);
+			path = Res;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,8 +142,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D01C05DA216B11B20095AA1F /* DS-Digital.TTF in Resources */,
+				D01C05D9216B11B20095AA1F /* product.pdf in Resources */,
+				D01C05DC216B11B20095AA1F /* data.sqlite in Resources */,
 				D01C05CD216AFEC80095AA1F /* LaunchScreen.storyboard in Resources */,
 				D01C05CA216AFEC80095AA1F /* Assets.xcassets in Resources */,
+				D01C05DB216B11B20095AA1F /* Solari.ttf in Resources */,
 				D01C05C8216AFEC10095AA1F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
