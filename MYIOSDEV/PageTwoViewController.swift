@@ -7,13 +7,30 @@
 //
 
 import UIKit
-
+import QRCode
 class PageTwoViewController: UIViewController {
+    
+    @IBOutlet weak var mTextField: UITextField!
+    @IBOutlet weak var mQRCodeImageView: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+
+    
+    @IBAction func onGenerate(){
+        let text = self.mTextField.text
+        
+        if text != nil && text != "" {
+            var qrCode = QRCode(text!)
+            qrCode!.color = CIColor(rgba: "f07b35")
+            qrCode!.backgroundColor = CIColor(rgba: "fff")
+            self.mQRCodeImageView.image = qrCode?.image
+        }else{
+            self.mQRCodeImageView.image = UIImage(named: "qr_code_generator.png")
+        }
     }
     
 
