@@ -268,7 +268,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="onGenerate" destination="zbu-Ar-kAL" eventType="editingChanged" id="SnJ-42-6Q5"/>
+                                    <action selector="onMyGenerate" destination="zbu-Ar-kAL" eventType="editingChanged" id="kA6-US-GBv"/>
                                 </connections>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="qr_code_generator" translatesAutoresizingMaskIntoConstraints="NO" id="r4b-KI-5PO">

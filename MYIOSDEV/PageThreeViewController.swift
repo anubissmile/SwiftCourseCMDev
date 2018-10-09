@@ -28,7 +28,7 @@ class PageThreeViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "custom") as! RestTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "custom") as! RestTableViewCell // This is casting data type.
         cell.mTitleLabel.text = "Smart ICT"
         cell.mSubtitleLabel.text = "IOS DEV!!!!..."
         return cell

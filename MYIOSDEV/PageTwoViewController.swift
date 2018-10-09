@@ -20,7 +20,7 @@ class PageTwoViewController: UIViewController {
     }
 
     
-    @IBAction func onGenerate(){
+    @IBAction func onMyGenerate(){  // You can change your own method name and must to re-binding this method to UI object.
         let text = self.mTextField.text
         
         if text != nil && text != "" {
