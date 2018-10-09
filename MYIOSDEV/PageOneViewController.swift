@@ -8,13 +8,15 @@
 
 import UIKit
 import WebKit
+import QRCodeReader
+import AVFoundation
 
-class PageOneViewController: UIViewController, WKNavigationDelegate {
+class PageOneViewController: UIViewController, WKNavigationDelegate, QRCodeReaderViewControllerDelegate {
     
     @IBOutlet weak var mWebKit: WKWebView!
     @IBOutlet weak var mLoading: UIActivityIndicatorView!
     
-    let mURL = "http://www.codemobiles.com"
+    var mURL = "https://www.pospos.co/"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,6 +61,61 @@ class PageOneViewController: UIViewController, WKNavigationDelegate {
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         self.mLoading.stopAnimating()
     }
+    
+    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+        let url = "https://www.pospos.co/register"
+        if navigationAction.request.url?.absoluteString == url {
+            //self.navigationController?.popViewController(animated: true)
+            
+            //Open Camera
+            scanAction()
+            decisionHandler(.cancel)  // cancel go to url
+        }else{
+            decisionHandler(.allow)   // allow go to url
+        }
+    }
+    
+    //--------------------------------------------------------
+    //QRCode Render Section
+    
+    func scanAction() {
+        //important
+        readerVC.delegate = self
+        
+        readerVC.modalPresentationStyle = .fullScreen
+        present(readerVC, animated: true, completion: nil)
+    }
+    
+    var readerVC: QRCodeReaderViewController = {
+        let builder = QRCodeReaderViewControllerBuilder {
+            $0.reader = QRCodeReader(metadataObjectTypes: [.qr], captureDevicePosition: .back)
+        }
+        
+        return QRCodeReaderViewController(builder: builder)
+    }()
+    
+    
+    func reader(_ reader: QRCodeReaderViewController, didScanResult result: QRCodeReaderResult) {
+        reader.stopScanning()
+        dismiss(animated: true, completion: nil)
+        
+        self.mURL = result.value
+        self.openWeb()
+    }
+    
+    func reader(_ reader: QRCodeReaderViewController, didSwitchCamera newCaptureDevice: AVCaptureDeviceInput) {
+        // front or back camera
+        let cameraName = newCaptureDevice.device.localizedName
+        print("Switching capturing to: \(cameraName)")
+    }
+    
+    func readerDidCancel(_ reader: QRCodeReaderViewController) {
+        reader.stopScanning()
+        dismiss(animated: true, completion: nil)
+    }
+    
+    //-----------------------------------
+    
     
     /*
      // MARK: - Navigation
