@@ -25,6 +25,7 @@
 		D01C05E4216B32E10095AA1F /* PageFourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01C05E3216B32E10095AA1F /* PageFourViewController.swift */; };
 		D01C05E6216B32F20095AA1F /* PageFiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01C05E5216B32F20095AA1F /* PageFiveViewController.swift */; };
 		D01C05E8216B33070095AA1F /* PageSixViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01C05E7216B33070095AA1F /* PageSixViewController.swift */; };
+		D0250E62216DDB6C0074F7D9 /* SQLiteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0250E61216DDB6C0074F7D9 /* SQLiteTableViewCell.swift */; };
 		D0B735A9216DA66A007D8D61 /* CMExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B735A8216DA66A007D8D61 /* CMExtension.swift */; };
 		D0B735AF216DB457007D8D61 /* DKLiveBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B735AE216DB457007D8D61 /* DKLiveBlurView.m */; };
 /* End PBXBuildFile section */
@@ -52,6 +53,7 @@
 		D01C05E3216B32E10095AA1F /* PageFourViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageFourViewController.swift; sourceTree = "<group>"; };
 		D01C05E5216B32F20095AA1F /* PageFiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageFiveViewController.swift; sourceTree = "<group>"; };
 		D01C05E7216B33070095AA1F /* PageSixViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageSixViewController.swift; sourceTree = "<group>"; };
+		D0250E61216DDB6C0074F7D9 /* SQLiteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteTableViewCell.swift; sourceTree = "<group>"; };
 		D0B735A8216DA66A007D8D61 /* CMExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMExtension.swift; sourceTree = "<group>"; };
 		D0B735AC216DB455007D8D61 /* MYIOSDEV-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MYIOSDEV-Bridging-Header.h"; sourceTree = "<group>"; };
 		D0B735AD216DB457007D8D61 /* DKLiveBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKLiveBlurView.h; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				D01C05E7216B33070095AA1F /* PageSixViewController.swift */,
 				D01AB1F5216C8DE4006205C6 /* RestTableViewCell.swift */,
 				D0B735A8216DA66A007D8D61 /* CMExtension.swift */,
+				D0250E61216DDB6C0074F7D9 /* SQLiteTableViewCell.swift */,
 			);
 			path = MYIOSDEV;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				D01C05E0216B32BF0095AA1F /* PageTwoViewController.swift in Sources */,
 				D01C05DE216B32A20095AA1F /* PageOneViewController.swift in Sources */,
 				D01C05E4216B32E10095AA1F /* PageFourViewController.swift in Sources */,
+				D0250E62216DDB6C0074F7D9 /* SQLiteTableViewCell.swift in Sources */,
 				D01C05C5216AFEC10095AA1F /* ViewController.swift in Sources */,
 				D01C05C3216AFEC10095AA1F /* AppDelegate.swift in Sources */,
 				D01C05E8216B33070095AA1F /* PageSixViewController.swift in Sources */,
