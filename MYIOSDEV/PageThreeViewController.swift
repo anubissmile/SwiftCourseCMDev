@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import AlamofireImage
 
 class PageThreeViewController: UIViewController {
     
@@ -70,8 +71,14 @@ extension PageThreeViewController: UITableViewDataSource, UITableViewDelegate{
         let item = self.mDataArray[indexPath.row]
         cell.mTitleLabel.text = item.title
         cell.mSubtitleLabel.text = item.subtitle
+        
+        // Read Image
+        
+        cell.mAvatarImage.af_setImage(withURL: item.avatarImage.convertURL())
+        cell.mYoutubeImage.af_setImage(withURL: item.youtubeImage.convertURL())
         return cell
     }
+    
     
 }
 

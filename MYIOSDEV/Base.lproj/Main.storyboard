@@ -317,7 +317,7 @@
                                                             <rect key="frame" x="8" y="8" width="60" height="60"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         </imageView>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="loadingimg" translatesAutoresizingMaskIntoConstraints="NO" id="Nsw-h6-NTd">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="loadingimg" translatesAutoresizingMaskIntoConstraints="NO" id="Nsw-h6-NTd">
                                                             <rect key="frame" x="8" y="76" width="329" height="147"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         </imageView>

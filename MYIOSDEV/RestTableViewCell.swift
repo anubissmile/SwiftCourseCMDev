@@ -20,6 +20,14 @@ class RestTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        self.mAvatarImage.drawAsCircle(radius: 6)
+        self.mYoutubeImage.drawAsCircle(radius: 5)
+        self.mCardView.drawAsCircle(radius: 5)
+        self.mCardView.dropShadow()
+        self.mCardView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.8)
+        
+        self.backgroundColor = UIColor.clear
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
