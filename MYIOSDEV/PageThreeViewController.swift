@@ -14,6 +14,8 @@ class PageThreeViewController: UIViewController {
     
     @IBOutlet weak var mTableView: UITableView!
     let BASE_URL: String = "http://codemobiles.com/"
+    var mRefreshControl: UIRefreshControl!
+    var mBlurView: DKLiveBlurView!
     
     var mDataArray: [Youtube] = []
     
@@ -21,6 +23,43 @@ class PageThreeViewController: UIViewController {
         super.viewDidLoad()
         
         self.feedData()
+        
+        // Add refresh control
+        self.mRefreshControl = UIRefreshControl()
+        self.mRefreshControl.addTarget(self, action: #selector(feedDatas), for: .valueChanged)
+        self.mTableView.addSubview(self.mRefreshControl)
+        
+        // Add header view (optional)
+        let headerView = UIView()
+        headerView.frame = CGRect(x: 0, y: 0, width: 1, height: 250)
+        self.mTableView.tableHeaderView = headerView
+        
+        // Setup Blur Effect
+        self.mBlurView = DKLiveBlurView()
+        self.mBlurView.originalImage = UIImage(named: "listview_iphone.png")
+        self.mTableView.backgroundView = self.mBlurView
+        
+        // scrim
+        let gradient: CAGradientLayer = CAGradientLayer()
+        gradient.frame = view.bounds
+        gradient.colors = [
+            UIColor.clear.cgColor,
+            UIColor.clear.cgColor,
+            UIColor.white.withAlphaComponent(0.7).cgColor, UIColor.white.withAlphaComponent(0.8).cgColor]
+        self.mBlurView.layer.insertSublayer(gradient, at: 0)
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.mBlurView.scrollView = self.mTableView
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        self.mBlurView.scrollView = nil
+    }
+    
+    @objc func feedDatas(){
+        
     }
     
     func feedData(){
@@ -36,12 +75,14 @@ class PageThreeViewController: UIViewController {
                     
                     //Reload Table
                     self.mTableView.reloadData()
+                    
                 }catch let err{
                     print(err)
                 }
             case .failure(let error):
                 print(error.localizedDescription)
             }
+            self.mRefreshControl.endRefreshing()
         }
     }
     

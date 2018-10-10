@@ -26,6 +26,7 @@
 		D01C05E6216B32F20095AA1F /* PageFiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01C05E5216B32F20095AA1F /* PageFiveViewController.swift */; };
 		D01C05E8216B33070095AA1F /* PageSixViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01C05E7216B33070095AA1F /* PageSixViewController.swift */; };
 		D0B735A9216DA66A007D8D61 /* CMExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B735A8216DA66A007D8D61 /* CMExtension.swift */; };
+		D0B735AF216DB457007D8D61 /* DKLiveBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B735AE216DB457007D8D61 /* DKLiveBlurView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,9 @@
 		D01C05E5216B32F20095AA1F /* PageFiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageFiveViewController.swift; sourceTree = "<group>"; };
 		D01C05E7216B33070095AA1F /* PageSixViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageSixViewController.swift; sourceTree = "<group>"; };
 		D0B735A8216DA66A007D8D61 /* CMExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMExtension.swift; sourceTree = "<group>"; };
+		D0B735AC216DB455007D8D61 /* MYIOSDEV-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MYIOSDEV-Bridging-Header.h"; sourceTree = "<group>"; };
+		D0B735AD216DB457007D8D61 /* DKLiveBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKLiveBlurView.h; sourceTree = "<group>"; };
+		D0B735AE216DB457007D8D61 /* DKLiveBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKLiveBlurView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +116,7 @@
 		D01C05C1216AFEC10095AA1F /* MYIOSDEV */ = {
 			isa = PBXGroup;
 			children = (
+				D0B735AB216DB41F007D8D61 /* BlurUtil */,
 				D01AB1F7216C9B77006205C6 /* Model */,
 				D01C05D4216B10B60095AA1F /* Res */,
 				D01C05C2216AFEC10095AA1F /* AppDelegate.swift */,
@@ -141,6 +146,16 @@
 				D01C05D7216B11B20095AA1F /* Solari.ttf */,
 			);
 			path = Res;
+			sourceTree = "<group>";
+		};
+		D0B735AB216DB41F007D8D61 /* BlurUtil */ = {
+			isa = PBXGroup;
+			children = (
+				D0B735AD216DB457007D8D61 /* DKLiveBlurView.h */,
+				D0B735AE216DB457007D8D61 /* DKLiveBlurView.m */,
+				D0B735AC216DB455007D8D61 /* MYIOSDEV-Bridging-Header.h */,
+			);
+			path = BlurUtil;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +192,7 @@
 				TargetAttributes = {
 					D01C05BE216AFEC10095AA1F = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -281,6 +297,7 @@
 			files = (
 				D01C05E2216B32D30095AA1F /* PageThreeViewController.swift in Sources */,
 				D0B735A9216DA66A007D8D61 /* CMExtension.swift in Sources */,
+				D0B735AF216DB457007D8D61 /* DKLiveBlurView.m in Sources */,
 				D01C05E0216B32BF0095AA1F /* PageTwoViewController.swift in Sources */,
 				D01C05DE216B32A20095AA1F /* PageOneViewController.swift in Sources */,
 				D01C05E4216B32E10095AA1F /* PageFourViewController.swift in Sources */,
@@ -436,6 +453,7 @@
 			baseConfigurationReference = 39DE17CEA29A5991910AD0C0 /* Pods-MYIOSDEV.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9F9ST5EYZG;
 				INFOPLIST_FILE = MYIOSDEV/Info.plist;
@@ -445,6 +463,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.smartict.MYIOSDEV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MYIOSDEV/BlurUtil/MYIOSDEV-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -455,6 +475,7 @@
 			baseConfigurationReference = 7CFF62DB60FE2882542B8921 /* Pods-MYIOSDEV.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9F9ST5EYZG;
 				INFOPLIST_FILE = MYIOSDEV/Info.plist;
@@ -464,6 +485,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.smartict.MYIOSDEV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MYIOSDEV/BlurUtil/MYIOSDEV-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
