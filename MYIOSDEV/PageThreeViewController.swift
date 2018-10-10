@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import AlamofireImage
+import XCDYouTubeKit
 
 class PageThreeViewController: UIViewController {
     
@@ -120,6 +121,12 @@ extension PageThreeViewController: UITableViewDataSource, UITableViewDelegate{
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let idYoutube = self.mDataArray[indexPath.row].id
+        
+        let youtubeVC = XCDYouTubeVideoPlayerViewController(videoIdentifier: idYoutube)
+        self.present(youtubeVC, animated: true)
+    }
     
 }
 
