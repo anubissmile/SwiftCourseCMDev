@@ -26,7 +26,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
         self.tracking()
         self.setupMap()
         self.loadMarker()
@@ -42,6 +41,13 @@ class ViewController: UIViewController {
             backButton.title = "Back"
             self.navigationItem.backBarButtonItem = backButton
         }
+        
+        if let dest = segue.destination as? ShowInfoViewController{
+            dest.marker = sender as? GMSMarker
+            
+            dest.navigationItem.title = "รายละเอียด"
+        }
+        
     }
     
     @IBAction func switchMapType(sender: UISegmentedControl) {
@@ -164,11 +170,14 @@ extension ViewController: GMSMapViewDelegate, CLLocationManagerDelegate{
     
     func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
         //Homework. click at info window and open new ViewController and navigate
+        print("You tapping on this info window.")
+        self.performSegue(withIdentifier: "ShowInfoSegue", sender: marker)
     }
     
     func mapView(_ mapView: GMSMapView, didLongPressAt coordinate: CLLocationCoordinate2D) {
         //Homework. Long click at map and open street view.
         self.performSegue(withIdentifier: "StreetViewSegue", sender: coordinate)
+        
     }
 }
 
