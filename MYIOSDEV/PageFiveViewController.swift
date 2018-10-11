@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class PageFiveViewController: UIViewController {
     
@@ -61,8 +62,53 @@ class PageFiveViewController: UIViewController {
     
     @IBAction func upload(){
         
+        if (!mIsSelectImage) {
+            return
+        }
+        
+        let image = self.mImagePreview.image?.jpegData(compressionQuality: 1)
+        let name = "\(arc4random()).jpeg"
+        //let url = "http://192.168.0.136:1150/uploads"  // asp .net core
+        
+        //let url = "http://192.168.0.136:3000/uploads" // node js
+        
+        //let url = "http://192.168.0.136:8080/up.php"   // php
+        
+        //My node server.js
+        let url = "http://192.168.0.100:3000/uploads"
+        
+        self.uploadFile(url: url, data: image!, fileName: name)
     }
     
+    func uploadFile(url: String, data: Data, fileName: String) {
+        
+        
+        let parameter = ["username":"admin", "password":"1234"]
+        let imageParameter = "userfiles"
+
+        Alamofire.upload(multipartFormData: { MultipartFormData in
+            MultipartFormData.append(data, withName: imageParameter, fileName: fileName, mimeType: "image/jpg")
+            for(key, value) in parameter{
+                MultipartFormData.append(value.data(using: .utf8)!, withName: key)
+            }
+        }, to: url, method: .post) { encodingResult in
+            switch encodingResult{
+            case .success(let upload, _, _):
+                upload.responseString(completionHandler: { (response) in
+                    switch response.result {
+                    case .success(let value):
+                        print("success")
+//                        self.showAlert(responseMsg: value)
+                    //self.showAlertWithCloseOutSideEnable(responseMsg: value)
+                    case .failure(let error):
+                        print("network error \(error.localizedDescription)")
+                    }
+                })
+            case .failure(let error):
+                print("network error \(error.localizedDescription)")
+            }
+        }
+    }
     
     /*
      // MARK: - Navigation
@@ -85,5 +131,7 @@ extension PageFiveViewController: UIImagePickerControllerDelegate, UINavigationC
         self.mImagePreview.drawAsCircle()
         
         self.mImagePicker.dismiss(animated: true, completion: nil)
+        
+        self.mIsSelectImage = true
     }
 }
