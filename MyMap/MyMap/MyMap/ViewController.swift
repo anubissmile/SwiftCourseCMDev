@@ -29,6 +29,7 @@ class ViewController: UIViewController {
         
         self.tracking()
         self.setupMap()
+        self.loadMarker()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -115,6 +116,40 @@ class ViewController: UIViewController {
         self.mapView.selectedMarker = marker  //Show Info window
         self.mapView.animate(toLocation: coordinate) //Move Camera
         self.dismiss(animated: true)
+    }
+    
+    func loadMarker() {
+        // Reading file from Wesarut.plist
+        let filePath = Bundle.main.path(forResource: "Wesarut", ofType: "plist")!
+        
+        //Casting
+        let data = NSArray(contentsOfFile: filePath)! as [AnyObject]
+        var bounds = GMSCoordinateBounds()
+        
+        for places in data{
+            
+            let marker_lat = places["latitude"] as! Double
+            let marker_lng = places["longitude"] as! Double
+            let marker_title = places["name"] as! String
+            let marker_address = places["address"] as! String
+            let marker_icon = places["image"] as! String
+            
+            let position = CLLocationCoordinate2D(latitude: marker_lat, longitude: marker_lng)
+            
+            //Setup marker
+            let marker = GMSMarker()
+            marker.position = position
+            marker.title = marker_title
+            marker.snippet = marker_address
+            marker.appearAnimation = .pop
+            marker.icon = UIImage(named: marker_icon)
+            
+            marker.map = self.mapView //add marker
+            
+            bounds = bounds.includingCoordinate(position)
+        }
+        
+        self.mapView.animate(with: GMSCameraUpdate.fit(bounds, withPadding: 70.0))
     }
     
 }

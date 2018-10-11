@@ -14,6 +14,7 @@
 		D059430E216F108C00E82F47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D059430D216F108C00E82F47 /* Assets.xcassets */; };
 		D0594311216F108C00E82F47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D059430F216F108C00E82F47 /* LaunchScreen.storyboard */; };
 		D084261D216F3DAA00983316 /* StreetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D084261C216F3DAA00983316 /* StreetViewController.swift */; };
+		D084261F216F434E00983316 /* Wesarut.plist in Resources */ = {isa = PBXBuildFile; fileRef = D084261E216F434E00983316 /* Wesarut.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		D0594310216F108C00E82F47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0594312216F108C00E82F47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D084261C216F3DAA00983316 /* StreetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetViewController.swift; sourceTree = "<group>"; };
+		D084261E216F434E00983316 /* Wesarut.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Wesarut.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				D059430F216F108C00E82F47 /* LaunchScreen.storyboard */,
 				D0594312216F108C00E82F47 /* Info.plist */,
 				D084261C216F3DAA00983316 /* StreetViewController.swift */,
+				D084261E216F434E00983316 /* Wesarut.plist */,
 			);
 			path = MyMap;
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 			files = (
 				D0594311216F108C00E82F47 /* LaunchScreen.storyboard in Resources */,
 				D059430E216F108C00E82F47 /* Assets.xcassets in Resources */,
+				D084261F216F434E00983316 /* Wesarut.plist in Resources */,
 				D059430C216F108900E82F47 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
