@@ -503,7 +503,7 @@
             </objects>
             <point key="canvasLocation" x="813.60000000000002" y="1123.9880059970017"/>
         </scene>
-        <!--Page Six View Controller-->
+        <!--Charts-->
         <scene sceneID="5eK-X7-fjJ">
             <objects>
                 <viewController id="vTq-XF-eXX" customClass="PageSixViewController" customModule="MYIOSDEV" customModuleProvider="target" sceneMemberID="viewController">
@@ -511,21 +511,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Chart" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lzt-Ls-3Ls">
-                                <rect key="frame" x="166" y="243" width="43" height="21"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="header" translatesAutoresizingMaskIntoConstraints="NO" id="EIj-g4-7Kf">
+                                <rect key="frame" x="67" y="84" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="shW-8L-UYy" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="37" y="212" width="300" height="300"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="gaX-aU-noe"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Charts" id="tbE-rA-SCY"/>
+                    <connections>
+                        <outlet property="mLineChart" destination="shW-8L-UYy" id="2lF-9U-Kht"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NgP-5X-tp3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1488" y="1127"/>
+            <point key="canvasLocation" x="1487.2" y="1126.6866566716642"/>
         </scene>
     </scenes>
     <resources>
@@ -538,6 +544,7 @@
         <image name="add_blue" width="180" height="180"/>
         <image name="camera_normal" width="192" height="236"/>
         <image name="cmdev_icon" width="160" height="160"/>
+        <image name="header" width="558" height="112"/>
         <image name="ios_training_header" width="2195" height="1901"/>
         <image name="landing_icon" width="234" height="50"/>
         <image name="loadingimg" width="871" height="483"/>
